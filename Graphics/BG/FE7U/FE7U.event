@@ -1,0 +1,12 @@
+ALIGN 4
+SBG_FE7U1Tiles:
+#incbin "FE7U1.dmp"
+ALIGN 4
+SBG_FE7U1Pal:
+#incbin "FE7U1_Pal.dmp"
+ALIGN 4
+SBG_FE7U2Tiles:
+#incbin "FE7U2.dmp"
+ALIGN 4
+SBG_FE7U2Pal:
+#incbin "FE7U2_Pal.dmp"

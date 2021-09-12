@@ -1,0 +1,25 @@
+// Change BG3 based on songID.
+// Display only background if L is pressed.
+// Press any button to display everything again.
+#ifndef _FE8_
+    ERROR "You're not assembling to an FE8 ROM!"
+#endif
+
+#include "Extensions/Hack Installation.txt"
+#include "EAstdlib.event"
+
+#ifndef FreeSpace
+	#define FreeSpace 0x1000000
+	ORG FreeSpace
+#endif
+
+// No need to define if it's in your FEClib reference file.
+#define FadePalette 0x80712B1
+
+//{
+#include "Defs/ProcDefinitions.event"
+#include "C/Main.lyn.event"
+#include "asm/asm.event"
+#include "Structs/Structs.event"
+#include "Graphics/Graphics.event"
+//}

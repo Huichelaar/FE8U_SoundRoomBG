@@ -1,0 +1,30 @@
+PUSH
+  
+  // Use SoundRoomOBJ.
+  ORG 0xAF7E0
+  POIN SoundRoomOBJ
+  // Add L-button prompt.
+  ORG 0xB0438
+  POIN SoundRoomOAM
+  // Lengthen control window box.
+  ORG 0xAF7C8
+  POIN SoundRoomControlWindowTSA
+  ORG 0xAFC40
+  POIN SoundRoomControlWindowTSA
+  ORG 0xAFB1A
+  BYTE 0xD                // Random mode, Y dimension of control window when sliding out.
+  ORG 0xAF6F8
+  BYTE 0x58               // Don't make Control Window (partially) transparent.
+  
+POP
+
+
+ALIGN 4
+SoundRoomOBJ:
+#incbin "SoundRoomOBJ.dmp"
+ALIGN 4
+SoundRoomOAM:
+#incbin "SoundRoomOAM.dmp"
+ALIGN 4
+SoundRoomControlWindowTSA:
+#incbin "SoundRoomControlWindowTSA.dmp"

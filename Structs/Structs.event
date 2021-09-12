@@ -1,0 +1,16 @@
+#define SBG_SongBGListEntry(songID, songBGStruct) "ALIGN 4; WORD songID; POIN songBGStruct"
+#define SBG_SongBGStructEntry(label, BGTiles, BGPalette, next) "ALIGN 4; label:; POIN BGTiles BGPalette next"
+
+ALIGN 4
+songBGList:
+SBG_SongBGListEntry(0x1, SBG_FE7U)
+SBG_SongBGListEntry(0x2, SBG_FE6)
+SBG_SongBGListEntry(0x3, SBG_FE7U)
+WORD 0 0
+
+// FE7U
+SBG_SongBGStructEntry(SBG_FE7U, SBG_FE7U1Tiles, SBG_FE7U1Pal, SBG_FE7U2)
+SBG_SongBGStructEntry(SBG_FE7U2, SBG_FE7U2Tiles, SBG_FE7U2Pal, SBG_FE7U)
+
+// FE6
+SBG_SongBGStructEntry(SBG_FE6, SBG_FE6Tiles, SBG_FE6Pal, 0)

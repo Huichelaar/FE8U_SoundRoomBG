@@ -1,0 +1,6 @@
+ALIGN 4
+SBG_FE6Tiles:
+#incbin "FE6.dmp"
+ALIGN 4
+SBG_FE6Pal:
+#incbin "FE6_Pal.dmp"
