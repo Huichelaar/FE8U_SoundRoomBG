@@ -16,10 +16,10 @@
 // No need to define if it's in your FEClib reference file.
 #define FadePalette 0x80712B1
 
-//{
+{
 #include "Defs/ProcDefinitions.event"
 #include "C/Main.lyn.event"
 #include "asm/asm.event"
 #include "Structs/Structs.event"
 #include "Graphics/Graphics.event"
-//}
+}
