@@ -20,9 +20,6 @@ INCFLAGS     := $(foreach dir, $(INCLUDE_DIRS), -I "$(dir)")
 ARCH   := -mcpu=arm7tdmi -mthumb -mthumb-interwork
 CFLAGS := $(ARCH)$(INCFLAGS) -Wall -Os -mtune=arm7tdmi -mlong-calls
 
-# lyn reference object
-LYNREF := C:/FE-CLibOld/reference/FE8U-20190316.o
-
 # listing files
 CFILES := $(wildcard *.c)
 SFILES := $(wildcard *.asm)
