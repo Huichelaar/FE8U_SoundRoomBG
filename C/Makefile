@@ -65,8 +65,10 @@ clean:
 	$(OBJCOPY) -S $< -O binary $@
 
 # OBJ to EVENT rule
-%.lyn.event: %.o $(LYNREF)
-	$(LYN) $< $(LYNREF) > $@
+%.lyn.event: %.o
+	$(MAKE) ../Defs/Definitions.o
+	$(LYN) $< ../Defs/Definitions.o > $@
+	rm ../Defs/Definitions.o
 
 # Including generated dependency rules
 -include $(DEPFILES)

@@ -5,16 +5,16 @@ push  {r4-r7, r14}
 mov   r5, r0
 
 
-ldr   r0, =KeyStatusBuffer
+ldr   r0, =gKeyState
 ldrh  r0, [r0, #0x8]
 cmp   r0, #0x0
 beq   Return
 
   @ Key was pressed. End proc.
   mov   r0, r5
-  ldr   r4, =Break6CLoop
+  ldr   r4, =BreakProcLoop
   bl    GOTO_R4
-  ldr   r0, =gpDISPCNTbuffer
+  ldr   r0, =gLCDIOBuffer
   mov   r1, #0x3F
   strb  r1, [r0, #0x1]
 

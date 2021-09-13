@@ -20,7 +20,7 @@ bl    GOTO_R4
 
 @ r5 contains SongID of song to be played.
 ldr   r0, =SBG_Main_Proc
-ldr   r4, =Find6C
+ldr   r4, =ProcFind
 bl    GOTO_R4
 mov   r7, r0
 cmp   r7, #0x0
@@ -28,7 +28,7 @@ bne   L1
 
   ldr   r0, =SBG_Main_Proc
   mov   r1, r6
-  ldr   r4, =New6C
+  ldr   r4, =ProcStart
   bl    GOTO_R4
   mov   r7, r0
   mov   r0, #0x0
