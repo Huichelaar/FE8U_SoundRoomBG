@@ -13,7 +13,7 @@ include $(DEVKITARM)/base_tools
 LYN := $ C:/devkitPro/lyn.exe
 
 # Setting C/ASM include directories up (there is none yet)
-INCLUDE_DIRS := C:/FE-CLibOld/include
+INCLUDE_DIRS := C:/FE-CLib/include
 INCFLAGS     := $(foreach dir, $(INCLUDE_DIRS), -I "$(dir)")
 
 # setting up compilation flags
